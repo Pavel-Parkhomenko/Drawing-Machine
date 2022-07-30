@@ -1,0 +1,49 @@
+@mixin common-styles() {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  bottom: 0px;
+  z-index: 100;
+  width: 200px;
+  max-width: 100%;
+  margin-top: 0px;
+  padding-top: 100px;
+  padding-right: 0px;
+  align-items: stretch;
+  background-color: #001698;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.no-active {
+  @include common-styles();
+  transform: translateX(-100%);
+}
+
+.active {
+  @include common-styles();
+  transform: translateX(0);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: blueviolet;
+  align-items: center;
+  font-size: 20px;
+  color: wheat;
+
+  button {
+    margin-top: 30px;
+  }
+}
+
+.management {
+  color: wheat;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    margin: 0;
+  }
+}
