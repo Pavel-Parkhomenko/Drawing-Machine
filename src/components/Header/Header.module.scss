@@ -2,9 +2,12 @@
   height: 70px;
   background-color: blueviolet;
   margin: 0;
-  padding: 0;
+  padding: 0 60px 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   h1 {
-    margin: 0;
+    color: snow;
   }
 }
