@@ -57,7 +57,7 @@ export function YesReloadMenu() {
         onChange={formik.handleChange}
         value={formik.values.gridLineWidth}
       />
-      <Submit title="Submit" />
+      <Submit title="Submit" type="submit" />
     </form>
   )
 }

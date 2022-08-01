@@ -1,0 +1,78 @@
+.modal {
+  font-size: 12px;
+  padding: 0 20px 0 20px;
+  width: 500px;
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+
+  & > .header {
+    font-size: 24px;
+    color: snow;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid brown;
+    padding: 10px 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+}
+
+.controlPanel {
+  margin-top: 10px;
+}
+
+.ulInfo {
+  color: snow;
+  font-size: 14px;
+}
+
+.controlInfo {
+  padding-bottom: 10px;
+  font-size: 14px;
+  & > span:first-child {
+    margin-right: 10px;
+    color: white;
+  }
+
+  & > span:last-child {
+    color: wheat;
+  }
+}
+
+.menuInfoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.confirmButton {
+  //text-align: center;
+  //horiz-align: center;
+  background-color: inherit;
+  color: snow;
+  border: 1px dashed snow;
+  margin: 20px 0 20px 0;
+  cursor: pointer;
+  padding: 7px;
+  &:hover {
+    border-bottom: 1px dashed red;
+    border-top: 1px dashed blue;
+    border-left: 1px dashed yellow;
+    border-right: 1px dashed violet;
+    font-size: 14px;
+  }
+}
+
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}

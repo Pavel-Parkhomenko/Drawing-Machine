@@ -39,7 +39,7 @@ export const Draw = React.forwardRef((prop, canvas) => {
         gridLineWidth={menuState.gridLineWidth}
         hideGridX={menuState.hideGridX}
         hideGridY={menuState.hideGridY}
-        loadTimeOffset={50}
+        loadTimeOffset={10}
       />
     </div>
   )
