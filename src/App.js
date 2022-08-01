@@ -18,7 +18,7 @@ const menuContext = {
 
 function App() {
   const [menuState, setMenuState] = useState(menuContext)
-  const [settings] = useLocalStorage('drawSettings', {})
+  const [settings] = useLocalStorage('drawSettings', menuContext)
   const canvas = useRef()
 
   const value = useMemo(() => ({

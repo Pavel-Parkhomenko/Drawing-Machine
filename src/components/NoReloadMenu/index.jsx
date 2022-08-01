@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { useFormik } from 'formik'
 import { MenuContext } from '../../context'
 import { Submit } from '../Submit'
+import { Range } from '../Range'
 
 export function NoReloadMenu() {
   const {
@@ -49,22 +50,20 @@ export function NoReloadMenu() {
         value={formik.values.catenaryColor}
       />
       <p>Radius</p>
-      <input
+      <Range
         id="range"
         name="range"
-        type="range"
-        min="0"
+        min="1"
         max="50"
         step="1"
         onChange={formik.handleChange}
         value={formik.values.range}
       />
       <p>Rope lenght</p>
-      <input
+      <Range
         id="lazyRadius"
         name="lazyRadius"
-        type="range"
-        min="0"
+        min="1"
         max="100"
         step="1"
         onChange={formik.handleChange}

@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { useFormik } from 'formik'
 import { MenuContext } from '../../context'
 import { Submit } from '../Submit'
+import { Range } from '../Range'
 
 export function YesReloadMenu() {
   const {
@@ -27,33 +28,30 @@ export function YesReloadMenu() {
   return (
     <form onSubmit={formik.handleSubmit}>
       <p>Grid Size-x</p>
-      <input
+      <Range
         id="gridSizeX"
         name="gridSizeX"
-        type="range"
-        min="0"
+        min="5"
         max="50"
         step="1"
         onChange={formik.handleChange}
         value={formik.values.gridSizeX}
       />
       <p>Grid Size-Y</p>
-      <input
+      <Range
         id="gridSizeY"
         name="gridSizeY"
-        type="range"
-        min="0"
+        min="5"
         max="50"
         step="1"
         onChange={formik.handleChange}
         value={formik.values.gridSizeY}
       />
       <p>Grid Line Width</p>
-      <input
+      <Range
         id="gridLineWidth"
         name="gridLineWidth"
-        type="range"
-        min="0"
+        min="0.5"
         max="5"
         step="0.5"
         onChange={formik.handleChange}
