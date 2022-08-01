@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Drawing-Machine/static/css/main.6f0187ab.css",
+    "main.js": "/Drawing-Machine/static/js/main.4fd52627.js",
+    "index.html": "/Drawing-Machine/index.html",
+    "main.6f0187ab.css.map": "/Drawing-Machine/static/css/main.6f0187ab.css.map",
+    "main.4fd52627.js.map": "/Drawing-Machine/static/js/main.4fd52627.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6f0187ab.css",
+    "static/js/main.4fd52627.js"
+  ]
+}
