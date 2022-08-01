@@ -10,7 +10,7 @@ import styles from './Draw.module.scss'
 
 export const Draw = React.forwardRef((prop, canvas) => {
   const [coords] = useState('')
-  const { menuState } = useContext(MenuContext)
+  const menuState = useContext(MenuContext)
   const ref = useRef()
 
   useImperativeHandle(canvas, () => ({
@@ -42,9 +42,9 @@ export const Draw = React.forwardRef((prop, canvas) => {
         catenaryColor={menuState.catenaryColor}
         gridSizeX={menuState.gridSizeX}
         gridSizeY={menuState.gridSizeY}
-        gridLineWidth={0.5}
-        hideGridX={false}
-        hideGridY={false}
+        gridLineWidth={menuState.gridLineWidth}
+        hideGridX={menuState.hideGridX}
+        hideGridY={menuState.hideGridY}
       />
     </div>
   )

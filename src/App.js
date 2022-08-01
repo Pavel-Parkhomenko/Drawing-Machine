@@ -2,6 +2,7 @@ import React, { useState, useMemo, useRef } from 'react'
 import { Draw } from './components/Draw'
 import { Header } from './components/Header'
 import { MenuContext } from './context'
+import { useLocalStorage } from './hooks/useLocalStorage'
 
 const menuContext = {
   color: '#000000',
@@ -12,33 +13,20 @@ const menuContext = {
   gridSizeY: 15,
   gridLineWidth: 0.5,
   hideGridX: false,
-  hideGridY: false,
-  canvas: null
+  hideGridY: false
 }
 
 function App() {
   const [menuState, setMenuState] = useState(menuContext)
+  const [settings] = useLocalStorage('drawSettings', {})
   const canvas = useRef()
 
   const value = useMemo(() => ({
-    menuState,
+    ...menuState,
+    ...settings,
     setMenuState,
-    canvas
-  }), [menuState, setMenuState, canvas])
-
-  // useEffect(() => {
-  //   const data = localStorage.getItem('drawSettings')
-  //   if (data) setMenuState({ ...menuState, ...data })
-  // }, [])
-  if (localStorage.getItem('drawSettings')) {
-    setMenuState(
-      {
-        ...menuState,
-        ...JSON.parse(localStorage.getItem('drawSettings'))
-      }
-    )
-    localStorage.removeItem('drawSettings')
-  }
+    canvas,
+  }), [menuState, setMenuState, canvas, settings])
 
   return (
     <div className="App">

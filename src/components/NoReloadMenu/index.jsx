@@ -3,12 +3,29 @@ import { useFormik } from 'formik'
 import { MenuContext } from '../../context'
 
 export function NoReloadMenu() {
-  const { menuState, setMenuState } = useContext(MenuContext)
+  const {
+    color,
+    catenaryColor,
+    range,
+    lazyRadius,
+    setMenuState
+  } = useContext(MenuContext)
 
   const formik = useFormik({
-    initialValues: menuState,
+    initialValues: {
+      color,
+      catenaryColor,
+      range,
+      lazyRadius
+    },
     onSubmit: values => {
-      setMenuState({ ...menuState, ...values })
+      setMenuState({
+        color,
+        catenaryColor,
+        range,
+        lazyRadius,
+        ...values
+      })
     },
   })
 

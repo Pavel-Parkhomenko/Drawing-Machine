@@ -3,10 +3,14 @@ import { useFormik } from 'formik'
 import { MenuContext } from '../../context'
 
 export function YesReloadMenu() {
-  const { menuState } = useContext(MenuContext)
+  const {
+    gridSizeX,
+    gridSizeY,
+    gridLineWidth
+  } = useContext(MenuContext)
 
   const formik = useFormik({
-    initialValues: menuState,
+    initialValues: { gridSizeX, gridSizeY, gridLineWidth },
     onSubmit: values => {
       localStorage.setItem('drawSettings', JSON.stringify(values))
     },
