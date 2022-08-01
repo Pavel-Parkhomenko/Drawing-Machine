@@ -12,14 +12,15 @@ export const Draw = React.forwardRef((prop, canvas) => {
   const ref = useRef()
 
   useImperativeHandle(canvas, () => ({
+    saveData: '',
     clear: () => {
       ref.current.clear()
     },
-    getSaveData: () => {
-      ref.current.getSaveData()
-    },
     loadSaveData: () => {
-      ref.current.loadSaveData('')
+      ref.current.loadSaveData(ref.current.getSaveData(), false)
+    },
+    undo: () => {
+      ref.current.undo()
     }
   }))
 
@@ -38,6 +39,7 @@ export const Draw = React.forwardRef((prop, canvas) => {
         gridLineWidth={menuState.gridLineWidth}
         hideGridX={menuState.hideGridX}
         hideGridY={menuState.hideGridY}
+        loadTimeOffset={50}
       />
     </div>
   )

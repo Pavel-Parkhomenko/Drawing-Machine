@@ -3,7 +3,7 @@ import styles from './Menu.module.scss'
 
 export function Menu({ message, children }) {
   return (
-    <nav className={children ? styles.active : styles.noActive}>
+    <nav className={styles.menu}>
       <div>
         <p className={styles.message}>
           { message }

@@ -1,4 +1,14 @@
-@mixin common-styles() {
+@keyframes fromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.menu {
+  animation: fromRight 0.5s;
   box-sizing: border-box;
   position: absolute;
   top: 70px;
@@ -9,18 +19,7 @@
   max-width: 100%;
   align-items: stretch;
   background-color: blueviolet;
-  //transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   padding: 20px;
-}
-
-.no-active {
-  @include common-styles();
-  transform: translateX(-100%);
-}
-
-.active {
-  @include common-styles();
-  transform: translateX(0);
 
   & > form {
     display: flex;

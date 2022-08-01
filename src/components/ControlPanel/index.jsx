@@ -5,6 +5,7 @@ import { Menu } from '../Menu'
 import { NoReloadMenu } from '../NoReloadMenu'
 import { YesReloadMenu } from '../YesReloadMenu'
 import { messageYesReload, messageNoReload } from '../../mocks'
+import { Button } from '../Button'
 
 export function ControlPanel() {
   const { canvas } = useContext(MenuContext)
@@ -25,21 +26,36 @@ export function ControlPanel() {
     canvas.current.clear()
   }
 
+  const handleUndo = () => {
+    canvas.current.undo()
+  }
+
+  const handlePlay = () => {
+    canvas.current.loadSaveData()
+  }
+
   return (
     <div className={styles.container}>
-      <button type="button" onClick={handleClear}>Clear</button>
-      <button
-        type="button"
+      <Button
+        onClick={handleClear}
+        title="Clear"
+      />
+      <Button
+        onClick={handleUndo}
+        title="Undo"
+      />
+      <Button
+        onClick={handlePlay}
+        title="Play"
+      />
+      <Button
+        title="Without Reload"
         onClick={handleNoReload}
-      >
-        Without Reload
-      </button>
-      <button
-        type={'button'}
+      />
+      <Button
+        title="With Reload"
         onClick={handleYesReload}
-      >
-        With Reload
-      </button>
+      />
       {isYesReloadMenu && (
         <Menu message={messageYesReload}>
           <YesReloadMenu />

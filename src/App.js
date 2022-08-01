@@ -12,6 +12,7 @@ const menuContext = {
   gridSizeX: 15,
   gridSizeY: 15,
   gridLineWidth: 0.5,
+  loadTimeOffset: 5,
   hideGridX: false,
   hideGridY: false
 }
