@@ -4,6 +4,7 @@ import { MenuContext } from '../../context'
 import { Menu } from '../Menu'
 import { NoReloadMenu } from '../NoReloadMenu'
 import { YesReloadMenu } from '../YesReloadMenu'
+import { messageYesReload, messageNoReload } from '../../mocks'
 
 export function ControlPanel() {
   const { canvas } = useContext(MenuContext)
@@ -40,12 +41,12 @@ export function ControlPanel() {
         With Reload
       </button>
       {isYesReloadMenu && (
-        <Menu>
+        <Menu message={messageYesReload}>
           <YesReloadMenu />
         </Menu>
       )}
       {isNoReloadMenu && (
-        <Menu>
+        <Menu message={messageNoReload}>
           <NoReloadMenu />
         </Menu>
       )}

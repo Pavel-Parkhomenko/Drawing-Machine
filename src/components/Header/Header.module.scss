@@ -2,12 +2,19 @@
   height: 70px;
   background-color: blueviolet;
   margin: 0;
-  padding: 0 60px 0 60px;
+  padding: 0 130px 0 130px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   h1 {
-    color: snow;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(90deg, rgba(230,232,18,1) 25%, rgba(12,143,189,1) 78%);
   }
+}
+
+.headerContainer {
+  width: 1200px;
+  background: blue;
 }

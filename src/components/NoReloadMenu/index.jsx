@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { useFormik } from 'formik'
 import { MenuContext } from '../../context'
+import { Submit } from '../Submit'
 
 export function NoReloadMenu() {
   const {
@@ -31,6 +32,7 @@ export function NoReloadMenu() {
 
   return (
     <form onSubmit={formik.handleSubmit}>
+      <p>Color</p>
       <input
         id="color"
         name="color"
@@ -46,7 +48,7 @@ export function NoReloadMenu() {
         onChange={formik.handleChange}
         value={formik.values.catenaryColor}
       />
-      <p>Range</p>
+      <p>Radius</p>
       <input
         id="range"
         name="range"
@@ -68,7 +70,7 @@ export function NoReloadMenu() {
         onChange={formik.handleChange}
         value={formik.values.lazyRadius}
       />
-      <button type="submit">Submit</button>
+      <Submit title="Submit" />
     </form>
   )
 }

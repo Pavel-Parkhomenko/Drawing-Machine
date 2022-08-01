@@ -1,8 +1,7 @@
 .container {
-  background-color: #a6106a;
-  color: wheat;
-
-  button {
-    color: red;
+  & > button {
+    border: none;
+    color: white;
+    background: inherit;
   }
 }

@@ -1,0 +1,38 @@
+.slidingButton {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  position: relative;
+  padding: 10px 25px;
+  border: 1px solid;
+  border-radius: 10px;
+  background: inherit;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: .8s cubic-bezier(.165, .84, .44, 1);
+}
+
+.slidingButton:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 100%;
+  border-radius: 10px;
+  z-index: -1;
+  color: white;
+  background: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+  transition: .8s cubic-bezier(.165, .84, .44, 1);
+}
+
+.slidingButton:hover {
+  background: rgba(255, 255, 255, 0);
+}
+
+.slidingButton:hover:before {
+  bottom: 0;
+  top: auto;
+  height: 100%;
+}
+
