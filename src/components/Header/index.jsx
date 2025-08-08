@@ -8,7 +8,6 @@ export function Header() {
     <header className={styles.header}>
       <div className={styles.headerLogo}>
         <PopupInfo trigger={<button type="button">Drawing Machine</button>} />
-        <p>Click here</p>
       </div>
       <ControlPanel />
     </header>

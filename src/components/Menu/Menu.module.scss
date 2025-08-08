@@ -9,12 +9,12 @@
 
 .menu {
   animation: fromRight 0.5s;
-  box-sizing: border-box;
+  // box-sizing: border-box;
   position: absolute;
-  top: 70px;
+  top: 80px;
   right: 0;
   bottom: 0;
-  z-index: 100;
+  z-index: 0;
   width: 300px;
   max-width: 100%;
   align-items: stretch;

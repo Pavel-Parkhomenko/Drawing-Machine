@@ -9,6 +9,7 @@ import { Button } from '../Button'
 
 export function ControlPanel() {
   const { canvas } = useContext(MenuContext)
+
   const [isYesReloadMenu, setIsYesReloadMenu] = useState(false)
   const [isNoReloadMenu, setIsNoReloadMenu] = useState(false)
 
@@ -37,24 +38,26 @@ export function ControlPanel() {
   return (
     <div className={styles.container}>
       <Button
-        onClick={handleClear}
         title="Clear"
+        onClick={handleClear}
       />
       <Button
-        onClick={handleUndo}
         title="Undo"
+        onClick={handleUndo}
       />
       <Button
-        onClick={handlePlay}
         title="Play"
+        onClick={handlePlay}
       />
       <Button
-        title="Without Reload"
+        title="Reload+"
         onClick={handleNoReload}
+        isActive={isNoReloadMenu}
       />
       <Button
-        title="With Reload"
+        title="Reload-"
         onClick={handleYesReload}
+        isActive={isYesReloadMenu}
       />
       {isYesReloadMenu && (
         <Menu message={messageYesReload}>

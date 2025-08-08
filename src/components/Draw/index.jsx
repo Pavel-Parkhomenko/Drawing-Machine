@@ -28,8 +28,8 @@ export const Draw = React.forwardRef((prop, canvas) => {
     <div className={styles.container}>
       <CanvasDraw
         ref={ref}
-        canvasWidth={1200}
-        canvasHeight={600}
+        canvasWidth={1600}
+        canvasHeight={800}
         brushRadius={menuState.range}
         brushColor={menuState.color}
         lazyRadius={menuState.lazyRadius}
