@@ -22,15 +22,9 @@
 
 .headerLogo {
   & > button {
-    @include logo(30px);
+    @include logo(25px);
     border: 0;
     cursor: pointer;
-  }
-  & > p {
-    margin: 0;
-    @include logo(10px);
-    letter-spacing: 5px;
-    text-transform: uppercase;
   }
 }
 
