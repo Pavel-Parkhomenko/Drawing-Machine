@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Drawing-Machine/static/css/main.df057d53.css",
+    "main.css": "/Drawing-Machine/static/css/main.78108adf.css",
     "main.js": "/Drawing-Machine/static/js/main.fb59730e.js",
     "index.html": "/Drawing-Machine/index.html",
-    "main.df057d53.css.map": "/Drawing-Machine/static/css/main.df057d53.css.map",
+    "main.78108adf.css.map": "/Drawing-Machine/static/css/main.78108adf.css.map",
     "main.fb59730e.js.map": "/Drawing-Machine/static/js/main.fb59730e.js.map"
   },
   "entrypoints": [
-    "static/css/main.df057d53.css",
+    "static/css/main.78108adf.css",
     "static/js/main.fb59730e.js"
   ]
 }
